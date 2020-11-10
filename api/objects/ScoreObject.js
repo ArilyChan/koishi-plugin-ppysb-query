@@ -57,13 +57,13 @@ class ScoreObject {
             console.log(ex);
             this.errorMessage = "获取谱面文件失败，部分数据无法显示，请重试\n";
         }
-        const name = "玩家：" + this.user.username + "\n";
+        const name = "player：" + this.user.username + "\n";
         const comboString = (this.mode !== 0) ? "combo: " + this.maxcombo + "\n" : "combo: " + this.maxcombo + "/" + this.beatmap.maxCombo + "\n";
         const accString = "ACC：" + this.acc.toFixed(2) + "%\n";
         const modsString = "mod：" + utils.getScoreModsString(this.mods) + "\n";
         const rankString = "rank：" + this.rank + "\n";
         const ppString = (this.pp === 0 || this.completed === 0) ? "" : "pp：" + this.pp.toFixed(2) + "pp\n";
-        const scoreString = "分数：" + utils.format_number(this.score) + "\n";
+        const scoreString = "score：" + utils.format_number(this.score) + "\n";
         let counts = [];
         if (this.mode === 0) {// std
             if (this.count300 > 0) counts.push(" " + this.count300 + "x 300 ");
