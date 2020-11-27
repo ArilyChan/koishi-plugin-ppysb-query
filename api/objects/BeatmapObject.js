@@ -65,13 +65,13 @@ class BeatmapObject {
             else if (scoremode === 3) diff = " ★" + this.difficulty2.mania.toFixed(2);
             else diff = " ★" + this.difficulty.toFixed(2);
             const scoreModeString = (scoremode || scoremode === 0) ? utils.getModeString(scoremode) : "";
-            return "谱面 " + this.beatmapId + " " + this.songName + diff + " - " + scoreModeString + " ：\n";
+            return "谱面 " + this.beatmapId + " " + this.songName + diff + " 的" + scoreModeString + "成绩：\n";
         }
         else {
             // scoremode应为parseInt(apiObject.m)
             if (!scoremode) scoremode = this.beatmapMode;
             const scoreModeString = utils.getModeString(scoremode);
-            return "谱面 " + this.beatmapId + " " + this.artist + " - " + this.title + "[" + this.diff + "] " + " ★" + this.stars.toFixed(2) + " - " + scoreModeString + " ：\n";
+            return "谱面 " + this.beatmapId + " " + this.artist + " - " + this.title + "[" + this.diff + "] " + " ★" + this.stars.toFixed(2) + " 的" + scoreModeString + "成绩：\n";
         }
     }
 }
