@@ -1,5 +1,7 @@
 # ppysb-query-ripple
 
+## 因sb服无限期维护，暂时封存本项目直到sb服重新开放
+
 ### 使用
 ```javascript
 options = {
